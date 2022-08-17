@@ -34,7 +34,7 @@
         <div class="inner">
             <!-- Header -->
             <header id="header">
-                <a href="http://127.0.0.1:8000/caffeine/result/" class="logo"><strong>Register Page</strong> by Caffeine
+                <a href="http://localhost:8000/caffeine/result/" class="logo"><strong>Register Page</strong> by Caffeine
                     Intoxication</a>
                 <ul class="icons">
                     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -65,7 +65,7 @@
                 {% if user.is_authenticated %}
                     <script type="text/javascript" >
                         alert('로그인 성공!')
-                        location.replace("http://127.0.0.1:8000/");
+                        location.replace("http://localhost:8000/");
                     </script>    
                 {% endif %}
 <!--                form wrapper div end-->
@@ -93,8 +93,8 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="http://127.0.0.1:8000/caffeine/">NEW SUMMARIZE</a></li>
-                    <li><a href="http://127.0.0.1:8000/caffeine/board/">HISTORY</a></li>
+                    <li><a href="http://localhost:8000/caffeine/">NEW SUMMARIZE</a></li>
+                    <li><a href="http://localhost:8000/caffeine/board/">HISTORY</a></li>
 {#                    <li><a href="#">??</a></li>#}
 
                 </ul>
@@ -138,10 +138,10 @@
 <script>
     function login_function() {
         $.ajax({
-            url: 'http://127.0.0.1:8000/login/'
+            url: 'http://localhost:8000/login/'
         }).then(function () {
             alert("로그인 성공");
-            location.replace("http://127.0.0.1:8000/");
+            location.replace("http://localhost:8000/");
             });
         }
     </script>

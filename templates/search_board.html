@@ -28,7 +28,7 @@
         <div class="inner">
             <!-- Header -->
             <header id="header">
-                <a href="http://127.0.0.1:8000/caffeine/" class="logo"><strong>Search Page</strong> by Caffeine
+                <a href="http://localhost:8000/caffeine/" class="logo"><strong>Search Page</strong> by Caffeine
                     Intoxication</a>
                 <ul class="icons">
                     <li class="nav-item">
@@ -50,9 +50,9 @@
                 </header>
                 <div class="posts">
                     {% for lec in video_search %}
-                    <article href="http://127.0.0.1:8000/caffeine/{{lec.lecture_name}}/">
-                        <a href="http://127.0.0.1:8000/caffeine/{{lec.lecture_name}}/" class="image"><img src="http://img.youtube.com/vi/{{lec.id_url}}/mqdefault.jpg" alt="thumbnail"></a>
-                        <h5><a href="http://127.0.0.1:8000/caffeine/{{lec.lecture_name}}/"> {{ lec.lecture_name }}</a></h5>
+                    <article href="http://localhost:8000/caffeine/{{lec.lecture_name}}/">
+                        <a href="http://localhost:8000/caffeine/{{lec.lecture_name}}/" class="image"><img src="http://img.youtube.com/vi/{{lec.id_url}}/mqdefault.jpg" alt="thumbnail"></a>
+                        <h5><a href="http://localhost:8000/caffeine/{{lec.lecture_name}}/"> {{ lec.lecture_name }}</a></h5>
                     </article>
                     {% endfor %}
                 </div>
@@ -66,7 +66,7 @@
 
             <!-- Search -->
             <section id="search" class="alt">
-                <form method="post" action="http://127.0.0.1:8000/caffeine/searchlec/">
+                <form method="post" action="http://localhost:8000/caffeine/searchlec/">
                     <input type="text" name="query" id="query" placeholder="Search"/>
                 </form>
             </section>
@@ -77,8 +77,8 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="http://127.0.0.1:8000/caffeine/">NEW SUMMARIZE</a></li>
-                    <li><a href="http://127.0.0.1:8000/caffeine/board/">HISTORY</a></li>
+                    <li><a href="http://localhost:8000/caffeine/">NEW SUMMARIZE</a></li>
+                    <li><a href="http://localhost:8000/caffeine/board/">HISTORY</a></li>
 {#                    <li><a href="#">??</a></li>#}
 
                 </ul>
@@ -121,7 +121,7 @@
 <script>
     function logout_function() {
         $.ajax({
-            url: 'http://127.0.0.1:8000/logout/'
+            url: 'http://localhost:8000/logout/'
         }).then(function () {
             alert("로그아웃 되었습니다");
             location.reload();
@@ -131,7 +131,7 @@
 
     function recommend_lec() {
         $.ajax({
-            url: 'http://127.0.0.1:8000/caffeine/result/',
+            url: 'http://localhost:8000/caffeine/result/',
             method: 'POST',
             data: {'address': $('#recommend_url').html()},
 
