@@ -12,7 +12,7 @@ from caffeine.forms import RegisterForm
 
 import time
 import os, os.path
-import pyautogui
+# import pyautogui
 
 from .tools.down_movie import downYoutubeMp3, down_title
 from .tools.stt import upload_blob_from_memory, transcribe_gcs_en, transcribe_gcs_kor
@@ -180,7 +180,7 @@ def code_to_text(request):  # 이미지를 통해 코드 추출
         y_up = float(295)
         x_right = float(1214)
         y_down = float(640)
-        pyautogui.screenshot('./img/{}.png'.format(count), region=(x_left, y_up, x_right, y_down))
+        # pyautogui.screenshot('./img/{}.png'.format(count), region=(x_left, y_up, x_right, y_down))
 
         # 이미지 경로 탐색
         path = os.getcwd()
