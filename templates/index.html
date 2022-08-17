@@ -28,7 +28,7 @@
         <div class="inner">
             <!-- Header -->
             <header id="header">
-                <a href="http://localhost:8000/caffeine/" class="logo"><strong>New summarize Page</strong> by Caffeine
+                <a href="http://0.0.0.1:8000/caffeine/" class="logo"><strong>New summarize Page</strong> by Caffeine
                     Intoxication</a>
                 <ul class="icons">
                     <li class="nav-item">
@@ -49,7 +49,7 @@
                 <!--				새로운 컨텐츠 넣을 때 이 곳에 요소들을 추가한다. 나머지는 틀-->
                 <h3>야 너두 영어로 수업 들을 수 있어!!!</h3>
                 <div id='col-6 col-12-small'>
-                    <form action="http://localhost:8000/caffeine/result/" method="POST">
+                    <form action="http://0.0.0.1:8000/caffeine/result/" method="POST">
                         <input type="text" id="input" name="address" placeholder="유튜브 주소 입력"
                                style='display : inline-block; float : left; width : 70%; margin-right:  2%'>
                         <input type="submit" value="요약하기" class='primary' style='display : inline-block; float : left;'>
@@ -63,9 +63,9 @@
                 </header>
                 <div class="posts">
                     {% for lec in recommend %}
-                    <article href="http://localhost:8000/caffeine/{{lec.lecture_name}}/">
-                        <a href="http://localhost:8000/caffeine/{{lec.lecture_name}}/" class="image"><img src="http://img.youtube.com/vi/{{lec.id_url}}/mqdefault.jpg" alt="thumbnail"></a>
-                        <h5><a href="http://localhost:8000/caffeine/{{lec.lecture_name}}/"> {{ lec.lecture_name }}</a></h5>
+                    <article href="http://0.0.0.1:8000/caffeine/{{lec.lecture_name}}/">
+                        <a href="http://0.0.0.1:8000/caffeine/{{lec.lecture_name}}/" class="image"><img src="http://img.youtube.com/vi/{{lec.id_url}}/mqdefault.jpg" alt="thumbnail"></a>
+                        <h5><a href="http://0.0.0.1:8000/caffeine/{{lec.lecture_name}}/"> {{ lec.lecture_name }}</a></h5>
                         <p> {{ lec.num_lecture }}명이 담은 강의</p>
                     </article>
                     {% endfor %}
@@ -80,7 +80,7 @@
 
             <!-- Search -->
             <section id="search" class="alt">
-                <form method="post" action="http://localhost:8000/caffeine/searchlec/">
+                <form method="post" action="http://0.0.0.1:8000/caffeine/searchlec/">
                     <input type="text" name="query" id="query" placeholder="Search"/>
                 </form>
             </section>
@@ -91,8 +91,8 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="http://localhost:8000/caffeine/">NEW SUMMARIZE</a></li>
-                    <li><a href="http://localhost:8000/caffeine/board/">HISTORY</a></li>
+                    <li><a href="http://0.0.0.1:8000/caffeine/">NEW SUMMARIZE</a></li>
+                    <li><a href="http://0.0.0.1:8000/caffeine/board/">HISTORY</a></li>
 {#                    <li><a href="#">??</a></li>#}
 
                 </ul>
@@ -135,7 +135,7 @@
 <script>
     function logout_function() {
         $.ajax({
-            url: 'http://localhost:8000/logout/'
+            url: 'http://0.0.0.1:8000/logout/'
         }).then(function () {
             alert("로그아웃 되었습니다");
             location.reload();
@@ -145,7 +145,7 @@
 
     function recommend_lec() {
         $.ajax({
-            url: 'http://localhost:8000/caffeine/result/',
+            url: 'http://0.0.0.1:8000/caffeine/result/',
             method: 'POST',
             data: {'address': $('#recommend_url').html()},
 
