@@ -25,7 +25,7 @@
         <div class="inner">
             <!-- Header -->
             <header id="header">
-                <a href="http://localhost:8000/caffeine/" class="logo"><strong>Lecture summarize Page</strong> by
+                <a href="http://34.64.112.170:8000/caffeine/" class="logo"><strong>Lecture summarize Page</strong> by
                     Caffeine Intoxication</a>
                 <ul class="icons">
                     <li class="nav-item">
@@ -67,7 +67,7 @@
                 <script>
                         function code_to_text() {
                             $.ajax({
-                                url: 'http://localhost:8000/caffeine/code_to_text/',
+                                url: 'http://34.64.112.170:8000/caffeine/code_to_text/',
                                 method: 'POST',
                                 }).then(function (response) {
                                     $('#code').prepend(response[0]);
@@ -144,7 +144,7 @@
 
             <!-- Search -->
             <section id="search" class="alt">
-                <form method="post" action="http://localhost:8000/caffeine/searchlec/">
+                <form method="post" action="http://34.64.112.170:8000/caffeine/searchlec/">
                     <input type="text" name="query" id="query" placeholder="Search"/>
                 </form>
             </section>
@@ -155,8 +155,8 @@
                     <h2>Menu</h2>
                 </header>
                 <ul>
-                    <li><a href="http://localhost:8000/caffeine/">NEW SUMMARIZE</a></li>
-                    <li><a href="http://localhost:8000/caffeine/board/">HISTORY</a></li>
+                    <li><a href="http://34.64.112.170:8000/caffeine/">NEW SUMMARIZE</a></li>
+                    <li><a href="http://34.64.112.170:8000/caffeine/board/">HISTORY</a></li>
 {#                    <li><a href="#">??</a></li>#}
 
                 </ul>
@@ -197,7 +197,7 @@
         $('#loading3').show();
         $('#loading4').show();
         $.ajax({
-            url: 'http://localhost:8000/caffeine/keytext/',
+            url: 'http://34.64.112.170:8000/caffeine/keytext/',
             method: 'POST',
             data: {'text': $('#textall').html()}
         }).then(function (response) {
@@ -235,7 +235,7 @@
 <script>
     function savedb() {
         $.ajax({
-            url: 'http://localhost:8000/caffeine/recommandsave/',
+            url: 'http://34.64.112.170:8000/caffeine/recommandsave/',
             method: 'POST',
             data: {'text': $('#lecture_id').text() }
         }).then(function (response) {

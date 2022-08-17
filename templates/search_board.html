@@ -121,7 +121,7 @@
 <script>
     function logout_function() {
         $.ajax({
-            url: 'http://localhost:8000/logout/'
+            url: 'http://34.64.112.170:8000/logout/'
         }).then(function () {
             alert("로그아웃 되었습니다");
             location.reload();
@@ -131,7 +131,7 @@
 
     function recommend_lec() {
         $.ajax({
-            url: 'http://localhost:8000/caffeine/result/',
+            url: 'http://34.64.112.170:8000/caffeine/result/',
             method: 'POST',
             data: {'address': $('#recommend_url').html()},
 
