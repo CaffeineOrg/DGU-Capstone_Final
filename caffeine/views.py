@@ -444,13 +444,13 @@ def login_view(request):
                 msg = 'login success!'
                 login(request, user)
                 ########################################
-                ## summary 모델 로드
-                model_sum, token_sum = sum_model_load()
-                models_sum.append(model_sum)
-                tokens_sum.append(token_sum)
-
-                ## keybert 모델 로드
-                models_key.append(load_key_model())
+                # ## summary 모델 로드
+                # model_sum, token_sum = sum_model_load()
+                # models_sum.append(model_sum)
+                # tokens_sum.append(token_sum)
+                #
+                # ## keybert 모델 로드
+                # models_key.append(load_key_model())
                 ########################################
         return render(request, 'login.html', {'form': form, 'msg': msg})
     else:
