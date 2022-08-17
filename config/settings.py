@@ -123,7 +123,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = ["34.64.112.170","http://www.cafffeinesuher.shop/"]
+ALLOWED_HOSTS = ["34.64.112.170",".cafffeinesuher.shop"]
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
