@@ -16,3 +16,11 @@
 ## 🖥 Develop Env.
 - Python 3.8.2
 - Django 4.0.4
+
+## Develop Architecture
+- Language : Python
+- NLP Model : BART, KeyBert
+- WebFrame : Django
+- CloudPlatform : Google
+- API : Google STT, Google Vision
+- DB : MySQL
