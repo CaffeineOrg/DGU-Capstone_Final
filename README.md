@@ -18,6 +18,7 @@
 - Django 4.0.4
 
 ## Develop Architecture
+![image](https://user-images.githubusercontent.com/70673855/196471950-d6e7be92-1a53-4d35-8b51-94e541765c7b.png)
 - Language : Python
 - NLP Model : BART, KeyBert
 - WebFrame : Django
